@@ -1,6 +1,6 @@
 # EasyLec
 
-Introduction
+#Introduction
 
 EasyLec is a simple native mobile application which can be used to let your mobile device to go into silent mode
 and recover it easily.  This application is designed for students in universities but this can be used by anyone
