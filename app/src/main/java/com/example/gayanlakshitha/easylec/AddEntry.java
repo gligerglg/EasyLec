@@ -1,6 +1,7 @@
 package com.example.gayanlakshitha.easylec;
 
 import android.app.Activity;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
@@ -70,14 +71,25 @@ public class AddEntry extends Activity {
                     minute = timePicker.getCurrentMinute();
                 }
 
-                try{
-                    SQLiteDatabase db = openOrCreateDatabase("easylec_db.db",MODE_PRIVATE,null);
-                    db.execSQL("INSERT INTO tbl_Schedule (weekday,hour,minute,duration) VALUES('" + weekDay + "'," + hour + "," + minute + "," + duration + ")");
+                try {
+                    boolean check = false;
+                    SQLiteDatabase db = openOrCreateDatabase("easylec_db.db", MODE_PRIVATE, null);
+                    Cursor cursor = db.rawQuery("SELECT hour,minute FROM tbl_Schedule WHERE weekday='" + weekDay + "'", null);
+                    while (cursor.moveToNext()) {
+                        if (cursor.getInt(0) == hour && cursor.getInt(1) == minute) {
+                            check = true;
+                        }
+                    }
+                    if (!check)
+                    {
+                        db.execSQL("INSERT INTO tbl_Schedule (weekday,hour,minute,duration) VALUES('" + weekDay + "'," + hour + "," + minute + "," + duration + ")");
+                    Toast.makeText(getApplicationContext(), "Weekday : " + weekDay + "\nTime : " + hour + ":" + minute + "\nDuration : " + durations.getSelectedItem().toString() + "\nAdded to Schedule Successfully!", Toast.LENGTH_SHORT).show();
+                    }
+                    else
+                        Toast.makeText(getApplicationContext(),"You have already added the Entry",Toast.LENGTH_SHORT).show();
                 }
                 catch (Exception e){
                     Toast.makeText(getApplicationContext(),"Database Error",Toast.LENGTH_LONG);
-                }finally {
-                    Toast.makeText(getApplicationContext(),"Weekday : "+ weekDay+"\nTime : " + hour + ":" + minute + "\nDuration : " + durations.getSelectedItem().toString() +"\nAdded to Schedule Successfully!",Toast.LENGTH_SHORT).show();
                 }
             }
         });
