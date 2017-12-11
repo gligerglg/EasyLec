@@ -1,9 +1,247 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Gliger-Pro | Android Projects</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="css/style.css">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="js/smooth-scrolling.js"></script>
+  	<script src="js/btn-hover.js"></script>
+  	<link rel="icon" href="images/icon_black.png">
 </head>
 <body>
+	<!-- Navigation Bar -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+  	<div class="container-fluid">
+    	<div class="navbar-header">
+      		<img src="images/icon_white.png" style="width: 70px;height: 50px" class="navbar-brand">
+      		<a class="navbar-brand" href="https://gligerglg.github.io"> <strong>Gliger-Pro</strong></a>
+      		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navList">
+      			<span class="icon-bar"></span>
+        		<span class="icon-bar"></span>
+        		<span class="icon-bar"></span> 
+      		</button>
+    	</div>
+    	<div id="navList" class="collapse navbar-collapse">
+    		<ul class="nav navbar-nav navbar-right">
+    			<li><a href="https://gligerglg.github.io/pages/mobile.html">Android Projects</a></li>
+    			<li><a href="https://gligerglg.github.io">Home</a></li>
+    			<li style="margin-left: 10px">
+    				<form action="https://github.com/gligerglg/EasyLec/raw/master/app/app-release.apk" method="GET">
+    					<button class="btn btn-danger btn-md navbar-btn">Download APK</button>
+    				</form>
+    			</li>
+    			<li style="margin-right: 10px;margin-left: 10px">
+    				<form action="https://github.com/gligerglg/EasyLec/archive/master.zip" method="GET">
+    					<button class="btn btn-danger btn-md navbar-btn">Download Project</button>
+    				</form>
+    			</li>
+    		</ul>
+    	</div>
+  	</div>
+	</nav>
+
+	<!--Introduction-->
+	<div class="jumbotrone" style="margin-top: 50px; background:#1E88E5">
+		<div class="container-fluid">
+			<div class="row" style="margin-left: 30px; margin-top: 50px; margin-bottom: 50px">
+				<div class="col-md-8">
+					<h1 style="color: #000"><strong>{ EasyLec }</strong></h1>
+					<br>
+					<h3 style="color: #000"><strong>Introduction</strong></h3><br>
+					<p style="font-size: 20px;margin-left: 20px;color: #000">
+						EasyLec is a simple native mobile application which can be used to let your mobile device to go into silent mode and recover it easily.  This application is designed for students in universities but this can be used by anyone who need this functionality (Teachers, Lectures, Employees).
+					</p>
+					<br>
+					<h3 style="color: #000"><strong>Importance</strong></h3><br>
+					<p style="font-size: 20px;margin-left: 20px;color: #000">
+						Just think you are a student in a university. Sure, you may have lectures everyday or couple of days for a week. Now this is the question, what will happen if you receive a phone call or couple of messages to your mobile device while you are in a lecture. Oh yeah! Your device will be ringing until you get it. The worst part is you will embarrass among other friends or maybe you will have to hand over your device to the lecturer. It’s a nightmare right? 
+					</p>
+
+					<p style="font-size: 20px;margin-left: 20px;color: #000">
+						So what kind of solution do we have? You can make your device silent before you go to your lecture. But you have to do this for each lecture and everyday! Maybe you will forget to do this. What if we have some solution to do this process automatically. Now you do have. EasyLec will turn your mobile device into silent mode in lecture hours and recover it again in normal times. Pretty nice right?
+					</p>
+				</div>
+				<div class="col-md-3" style="margin:20px;margin-top:10% ">
+					<video width="250"  controls autoplay loop>
+						<source src="videos/Video.mp4" type="video/mp4">
+					</video>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--How to Use-->
+	<div class="jumbotrone" style="background:#7a45d8">
+		<div class="container-fluid">
+			<div class="row" style="margin-left: 30px; margin-top: 50px; margin-bottom: 50px">
+				<div class="col-md-8">
+					<h3 style="color: #000"><strong>How to Use?</strong></h3><br>
+
+					<p style="font-size: 20px;margin-left: 20px;color: #000">
+						This is a simple guidance to show you how to use EasyLec in your android device. First you need to install EasyLec application into your device then run your application.
+					</p>
+					<p style="font-size: 20px;margin-left: 20px;color: #000">
+						When you fire up the app splash screen will show up. Then you will see the main activity of the application. Now you can see several buttons in your screen. Before you use this application you need to make a schedule telling the device that, at what time you need to make silent the device and which times you do not. To do that simply click on the <span>“Add new Entry” </span>button.  
+					</p>
+
+					<p style="font-size: 20px;margin-left: 20px;color: #000">
+						Now you will see a Spinner in a new activity to choose the day of the week, a DateTime Picker to choose the time you want to start your service and another Spinner to choose how many hours you neet to have the silent mode.
+					</p>
+
+					<p style="font-size: 20px;margin-left: 20px;color: #000">
+						Think, you have a lecture in Monday which start at 8 AM and the duration of the lecture is 3 hours. To schedule this event click on the 1st spinner showing in the top of the figure and choose <span>“Monday”</span> from the list. Then click on the DateTime Picker and select your starting time. According to our example it is 8 AM. Then you need to choose the duration of the lecture by selecting spinner in the bottom of the figure. Our duration is 3 hours so we should choose 3 Hour from the list. Simply click on the <span>“Add”</span> button. That’s all. Congratulations! You have added one entry to the schedular. Likewise you can add rest of your lecture hours using this interface.
+					</p>
+				</div>
+				<div class="col-md-3" style="margin:20px; ">
+					<!-- Carousel -->
+					<div id="Carousel" class="carousel slide" data-ride="carousel" style="margin-top: 50px">
+						<ol class="carousel-indicators">
+							<li data-target="#Carousel" data-slide-to="0" class="active"></li>
+							<li data-target="#Carousel" data-slide-to="1"></li>
+							<li data-target="#Carousel" data-slide-to="2"></li>
+							<li data-target="#Carousel" data-slide-to="3"></li>
+						</ol>
+
+						<div class="carousel-inner">
+							<div class="item active">
+								<img src="images\SCR1.png">
+							</div>
+
+							<div class="item">
+								<img src="images\SCR2.png">
+							</div>
+
+							<div class="item">
+								<img src="images\SCR3.png">
+							</div>
+
+							<div class="item">
+								<img src="images\SCR8.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--What Next?-->
+	<div class="jumbotrone" style="background:#7a45d8">
+		<div class="container-fluid">
+			<div class="row" style="margin-left: 30px; margin-top: 50px; margin-bottom: 50px">
+				<div class="col-md-8">
+					<h3 style="color: #000"><strong>What Next?</strong></h3><br>
+
+					<p style="font-size: 20px;margin-left: 20px;color: #000">
+						Now you have done the hard part. Using the next button <span>“List All Entries”</span> you can manage your schedule. When you click on the button, new interface will appear. Here you can see a Spinner showing the day of the week, a ListView showing the scheduled entries according to the selected day and another Spinner show you the entry ID’s for the selected day. You can see all the details of your schedule from this interface. By selecting each Day from  the Spinner you can see how many lectures do you have today, the starting time and the lecture duration. If you have entered a wrong entry to the schedule, you can easily remove that entry from here and you can also update an existing entry by selecting the ID of the entry.
+					</p>
+					<p style="font-size: 20px;margin-left: 20px;color: #000">
+						Each semester have different lectuere right? So you should re-schedule the application for each semester. To do that you need to clear all the entries from current schedule. You do not need to select each entry and remove it, simply click on the <span>“Reset Schedule”</span> button from the main menu and a conformation window will appear and ask you that, you really need to reset the schedule before deleting entries accidentally. Click on <span>“Yes”,</span> the whole entries will delete from the scheduler. Then you can add new entries for the new semester.  
+					</p>
+
+					<p style="font-size: 20px;margin-left: 20px;color: #000">
+						Congratulations! You have fully set up the application. To use the service you just need to do is click on the <span>“Start Service”</span> each morning then the app automatically calculate the remaining time to next lecture and schedule the time table for the current day. After you click on the button, you will see the remaining time to the Vibration mode and the remaining time to the Normal mode below of the interface as the Status of the service.
+					</p>
+
+					<p style="font-size: 20px;margin-left: 20px;color: #000">
+						Now you have nothing to worry about the embarrassing situation that can be happen in the lectures.
+					</p>
+				</div>
+				<div class="col-md-3" style="margin:20px; ">
+					<!-- Carousel -->
+					<div id="Carousel" class="carousel slide" data-ride="carousel" style="margin-top: 50px">
+						<ol class="carousel-indicators">
+							<li data-target="#Carousel" data-slide-to="0" class="active"></li>
+							<li data-target="#Carousel" data-slide-to="1"></li>
+							<li data-target="#Carousel" data-slide-to="2"></li>
+							<li data-target="#Carousel" data-slide-to="3"></li>
+						</ol>
+
+						<div class="carousel-inner">
+							<div class="item active">
+								<img src="images\SCR4.png">
+							</div>
+
+							<div class="item">
+								<img src="images\SCR5.png">
+							</div>
+
+							<div class="item">
+								<img src="images\SCR6.png">
+							</div>
+
+							<div class="item">
+								<img src="images\SCR7.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Contact-->
+	<div id="contact">
+		<div class="jubmotrone">
+			<h1 style="text-align: center;">Contact Info</h1>
+			<div class="container-fluid" style="margin-top: 50px">
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-3">
+						<h3>Contacts</h3>
+						<div style="margin-top: 20px">
+							<div style="font-size: 20px; color: lime">
+								Call
+							</div>
+							<div style="margin-top: 5px;margin-left: 10px; font-size: 20px">
+								<a href="tel:+94717082452" style="margin-left: 15px;margin-top: 15px"><span class="glyphicon glyphicon-earphone"></span> (+94717082452)</a>
+							</div>
+						</div>
+						<div style="margin-top: 20px">
+							<div style="font-size: 20px; color: lime">
+								Address
+							</div>
+							<div style="margin-top: 5px;margin-left: 25px;font-size: 20px">
+								<span class="glyphicon glyphicon-envelope"></span>
+								16B, <br>
+								Hettigama, <br>
+								Wewelwatta, <br>
+								Rathnapura. 
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<h3>Links</h3>
+						<div style="margin-top: 20px">
+							<div style="margin-top: 10px;margin-left: 10px">
+								<a href="https://www.facebook.com/gliger.glg" style="margin-left: 15px;margin-top: 20px; font-size: 20px" target="_blank">
+								<i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a>
+							</div>
+							<div style="margin-top: 10px;margin-left: 10px">
+								<a href="mailto:gliger.glg@gmail.com" style="margin-left: 15px;margin-top: 20px; font-size: 20px" target="_blank">
+								<i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
+							</div>
+							<div style="margin-top: 10px;margin-left: 10px">
+								<a href="https://github.com/gligerglg" style="margin-left: 15px;margin-top: 20px; font-size: 20px" target="_blank">
+								<i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+							</div>
+							<div style="margin-top: 10px;margin-left: 10px">
+								<a href="https://www.linkedin.com/in/gliger-glg/" style="margin-left: 15px;margin-top: 20px; font-size: 20px" target="_blank">
+								<i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4" style="margin:20px">
+						<img src="images\contact.jpg" class="img-responsive img-rounded">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>
